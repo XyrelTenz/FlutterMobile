@@ -71,7 +71,7 @@ class LoginPage extends StatelessWidget {
                   TextField(
                     controller: emailController,
                     decoration: InputDecoration(
-                      labelText: "Username",
+                      labelText: "Email",
                       labelStyle: TextStyle(color: Color(0xFF454545)),
                       floatingLabelBehavior: FloatingLabelBehavior.never,
                       filled: true,
