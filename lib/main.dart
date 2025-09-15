@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './auth/login.dart'; // import the separated LoginPage
+import './auth/login.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'JHCSC',
+      title: 'JHCSC College Admission',
       theme: ThemeData(
         brightness: Brightness.light,
         scaffoldBackgroundColor: Color(0xFFEBF4E1),
