@@ -8,6 +8,8 @@ class LoginPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isCheck = true;
+
     return Scaffold(
       body: Column(
         children: [
@@ -87,7 +89,7 @@ class LoginPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(
                           color: Color(0xFF454545),
-                          width: 2, // Adjust border width here
+                          width: 3, // Adjust border width here
                         ),
                       ),
                       suffixIcon: Icon(Icons.person, color: Color(0xFF90B77D)),
@@ -109,7 +111,7 @@ class LoginPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(
                           color: Color(0xFF454545),
-                          width: 2, // Adjust border width here
+                          width: 3, // Adjust border width here
                         ),
                       ),
                       focusedBorder: OutlineInputBorder(
@@ -130,8 +132,10 @@ class LoginPage extends StatelessWidget {
                       Row(
                         children: [
                           Checkbox(
-                            value: false,
-                            onChanged: (val) {},
+                            value: isCheck,
+                            onChanged: (bool? value) {
+                              isCheck = value ??= false;
+                            },
                             activeColor: Colors.white,
                             checkColor: Color(0xFF454545),
                           ),
