@@ -5,6 +5,6 @@ class UserMap extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text("Manage Users Page"));
+    return Center(child: Text("Map Here"));
   }
 }

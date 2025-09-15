@@ -1,8 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:mobileapp/auth/register.dart';
-import 'package:mobileapp/pages/client/home.dart';
-import 'package:mobileapp/pages/client/layout/userlayout.dart';
+import 'package:mobileapp/screens/auth/user_register_screen.dart';
+import 'package:mobileapp/screens/user_home_screen.dart';
+import 'package:mobileapp/layouts/user_menu_layout.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -25,7 +25,7 @@ class _LoginPageState extends State<LoginPage> {
         children: [
           // Header Title
           Container(
-            height: MediaQuery.of(context).size.height * 0.5,
+            height: MediaQuery.of(context).size.height * 0.45,
             width: double.infinity,
             color: const Color(0xFFEBF4E1),
             alignment: Alignment.center,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:mobileapp/pages/client/home.dart';
-import 'package:mobileapp/pages/client/map.dart';
-import 'package:mobileapp/pages/client/profile.dart';
-import 'package:mobileapp/pages/client/search.dart';
-import 'package:mobileapp/widgets/navbar.dart';
+import 'package:mobileapp/screens/user_home_screen.dart';
+import 'package:mobileapp/screens/user_map_screen.dart';
+import 'package:mobileapp/screens/user_profile_screen.dart';
+import 'package:mobileapp/screens/user_search_screen.dart';
+import 'package:mobileapp/widgets/menu_item.dart';
 
 class UserLayout extends StatefulWidget {
   final Widget child;
