@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import "package:mobileapp/auth/register.dart";
 
 class LoginPage extends StatelessWidget {
   final TextEditingController emailController = TextEditingController();
@@ -111,14 +112,14 @@ class LoginPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(
                           color: Color(0xFF454545),
-                          width: 3, // Adjust border width here
+                          width: 2, // Adjust border width here
                         ),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(
                           color: Color(0xFF454545),
-                          width: 2, // Adjust border width here
+                          width: 3, // Adjust border width here
                         ),
                       ),
                       suffixIcon: Icon(Icons.lock, color: Color(0xFF90B77D)),
@@ -185,7 +186,10 @@ class LoginPage extends StatelessWidget {
                   SizedBox(height: 8),
 
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Register();
+                      print("Clicked");
+                    },
                     child: Text(
                       "Don't have an account? Create a new account",
                       style: TextStyle(
