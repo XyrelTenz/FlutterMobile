@@ -49,7 +49,7 @@ class ProfileDetailScreen extends StatelessWidget {
             ),
             const SizedBox(height: 4),
             const Text(
-              "2nd Year",
+              "2nd Years",
               style: TextStyle(
                 fontSize: 16,
                 color: Color(0xFF454545),
