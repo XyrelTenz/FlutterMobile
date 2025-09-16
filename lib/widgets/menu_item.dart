@@ -26,7 +26,7 @@ class SchoolNavBar extends StatelessWidget {
           children: [
             _buildNavItem(Icons.home, "Home", 0),
             _buildNavItem(Icons.map, "Map", 1),
-            const SizedBox(width: 48), // leave space for FAB (scanner)
+            const SizedBox(width: 48),
             _buildNavItem(Icons.search, "Search", 2),
             _buildNavItem(Icons.person, "Profile", 3),
           ],

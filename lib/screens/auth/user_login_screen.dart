@@ -1,8 +1,6 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:mobileapp/screens/auth/user_register_screen.dart';
-import 'package:mobileapp/screens/user_home_screen.dart';
 import 'package:mobileapp/layouts/user_menu_layout.dart';
+import 'package:mobileapp/screens/user_home_screen.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -25,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
         children: [
           // Header Title
           Container(
-            height: MediaQuery.of(context).size.height * 0.45,
+            height: MediaQuery.of(context).size.height * 0.6,
             width: double.infinity,
             color: const Color(0xFFEBF4E1),
             alignment: Alignment.center,
@@ -40,7 +38,7 @@ class _LoginPageState extends State<LoginPage> {
                       "JH",
                       style: TextStyle(
                         color: Color(0xFF90B77D),
-                        fontSize: 42,
+                        fontSize: 55,
                         fontWeight: FontWeight.bold,
                         letterSpacing: 2,
                       ),
@@ -50,7 +48,7 @@ class _LoginPageState extends State<LoginPage> {
                       "CERILLES",
                       style: TextStyle(
                         color: Color(0xFF454545),
-                        fontSize: 28,
+                        fontSize: 20,
                         fontWeight: FontWeight.w600,
                         letterSpacing: 2,
                       ),
@@ -69,7 +67,9 @@ class _LoginPageState extends State<LoginPage> {
               padding: const EdgeInsets.all(24),
               decoration: const BoxDecoration(
                 color: Color(0xFF90B77D),
-                borderRadius: BorderRadius.vertical(top: Radius.circular(40)),
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(0),
+                ), // Login Form Border Radius Default = 45
               ),
               child: SingleChildScrollView(
                 child: Column(
@@ -96,22 +96,22 @@ class _LoginPageState extends State<LoginPage> {
                         filled: true,
                         fillColor: const Color(0xFFEBF4E1),
                         enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(0),
                           borderSide: const BorderSide(
                             color: Color(0xFF454545),
-                            width: 2,
+                            width: 1,
                           ),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(0),
                           borderSide: const BorderSide(
                             color: Color(0xFF454545),
-                            width: 3,
+                            width: 1,
                           ),
                         ),
                         suffixIcon: const Icon(
                           Icons.person,
-                          color: Color(0xFF90B77D),
+                          color: Color(0xFF454545),
                         ),
                       ),
                     ),
@@ -128,28 +128,27 @@ class _LoginPageState extends State<LoginPage> {
                         filled: true,
                         fillColor: const Color(0xFFEBF4E1),
                         enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(0),
                           borderSide: const BorderSide(
                             color: Color(0xFF454545),
-                            width: 2,
+                            width: 1,
                           ),
                         ),
                         focusedBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(0),
                           borderSide: const BorderSide(
                             color: Color(0xFF454545),
-                            width: 3,
+                            width: 1,
                           ),
                         ),
                         suffixIcon: const Icon(
                           Icons.lock,
-                          color: Color(0xFF90B77D),
+                          color: Color(0xFF454545),
                         ),
                       ),
                     ),
-                    const SizedBox(height: 16),
+                    const SizedBox(height: 5),
 
-                    // Forgot password
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -164,6 +163,9 @@ class _LoginPageState extends State<LoginPage> {
                               },
                               activeColor: Colors.white,
                               checkColor: const Color(0xFF454545),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(0),
+                              ),
                             ),
                             const Text(
                               "Remember me",
@@ -171,26 +173,9 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                           ],
                         ),
-
-                        // Forgot Password as link
-                        RichText(
-                          text: TextSpan(
-                            text: "Forgot Password?",
-                            style: const TextStyle(
-                              color: Color(0xFF454545),
-                              fontWeight: FontWeight.bold,
-                              decoration: TextDecoration.none,
-                            ),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                // TODO: Add forgot password logic
-                                print("Forgot Password clicked");
-                              },
-                          ),
-                        ),
                       ],
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 5),
 
                     // Login
                     ElevatedButton(
@@ -212,9 +197,9 @@ class _LoginPageState extends State<LoginPage> {
                         foregroundColor: const Color(0xFF454545),
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(12),
+                          borderRadius: BorderRadius.circular(0),
                         ),
-                        elevation: 4,
+                        elevation: 0,
                       ),
                       child: const Text(
                         "Login",
@@ -226,37 +211,6 @@ class _LoginPageState extends State<LoginPage> {
                     ),
 
                     const SizedBox(height: 16),
-
-                    // Register
-                    RichText(
-                      textAlign: TextAlign.center,
-                      text: TextSpan(
-                        text: "Don't have an account? ",
-                        style: const TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w500,
-                        ),
-                        children: [
-                          TextSpan(
-                            text: "Create a new account",
-                            style: const TextStyle(
-                              color: Color(0xFF454545),
-                              fontWeight: FontWeight.bold,
-                              decoration: TextDecoration.none,
-                            ),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => Register(),
-                                  ),
-                                );
-                              },
-                          ),
-                        ],
-                      ),
-                    ),
                   ],
                 ),
               ),
