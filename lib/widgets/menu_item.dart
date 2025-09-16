@@ -18,7 +18,7 @@ class SchoolNavBar extends StatelessWidget {
       color: const Color.fromARGB(255, 227, 245, 207),
       shadowColor: Color(0xFF454545),
       shape: const CircularNotchedRectangle(),
-      notchMargin: 15.0,
+      notchMargin: 20.0,
       elevation: 8,
       child: SafeArea(
         child: Row(
