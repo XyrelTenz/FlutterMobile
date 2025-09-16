@@ -42,12 +42,12 @@ class UserProfile extends StatelessWidget {
                     SizedBox(height: 6),
                     Text(
                       "School of Computing Studies",
-                      style: TextStyle(fontSize: 15, color: Colors.grey),
+                      style: TextStyle(fontSize: 15, color: Color(0xFF454545)),
                     ),
                     SizedBox(height: 4),
                     Text(
-                      "Year 2",
-                      style: TextStyle(fontSize: 15, color: Colors.grey),
+                      "2nd Year",
+                      style: TextStyle(fontSize: 15, color: Color(0xFF454545)),
                     ),
                   ],
                 ),
