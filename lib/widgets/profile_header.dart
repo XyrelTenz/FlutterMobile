@@ -8,7 +8,8 @@ class ProfileDetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Color(0xFFEBF4E1),
-        elevation: 0,
+        shadowColor: Color(0xFF454545),
+        elevation: 0.5,
         centerTitle: true,
         title: const Text(
           "Profile Details",

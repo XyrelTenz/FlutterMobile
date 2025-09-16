@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobileapp/screens/auth/user_login_screen.dart';
 import 'package:mobileapp/widgets/profile_header.dart';
 
 class UserProfile extends StatelessWidget {
@@ -82,7 +83,12 @@ class UserProfile extends StatelessWidget {
                       iconColor: Colors.red,
                       textColor: Colors.red,
                       onTap: () {
-                        // Handle logout
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute<void>(
+                            builder: (context) => const LoginPage(),
+                          ),
+                        );
                       },
                     ),
                   ],

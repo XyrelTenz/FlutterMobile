@@ -45,7 +45,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     SizedBox(width: 8),
                     Text(
-                      "CERILLES",
+                      "Cerilles",
                       style: TextStyle(
                         color: Color(0xFF454545),
                         fontSize: 20,
